@@ -1,3 +1,5 @@
+import zipfile, glob, os
+
 def extract_Zip_Folders(root=None):
     """take a path to folder and extract all zip files even nested ones"""
     if root is None:
@@ -17,3 +19,6 @@ def extract_Zip_Folders(root=None):
 
         for sub_folder in sub_folders:
             extract_Zip_Folders(sub_folder)
+
+if __name__ == "__main__":
+    extract_Zip_Folders()
